@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { CoursesService } from '../../services/courses.service';
+import { toSignal } from '@angular/core/rxjs-interop';
+import { catchError, of } from 'rxjs';
 
 @Component({
   selector: 'app-courses',
@@ -7,5 +10,13 @@ import { Component } from '@angular/core';
   styleUrl: './courses.component.css'
 })
 export class CoursesComponent {
+  private service = inject(CoursesService)
+
+  courses = toSignal (this.service
+    .getCourses()
+    .pipe(catchError(err=>{
+      console.log(err);
+      return of([])
+    })))
 
 }

@@ -1,0 +1,30 @@
+
+mat-card{
+    display: flex;
+    position: absolute;
+    opacity: 0.9;
+    z-index: 30;
+    max-width: 400px;
+    margin: auto;
+    left: 30%;
+    bottom: 50%;
+}
+mat-card-title{
+    color: white;
+    padding: 16px;
+    text-align: center;
+}
+mat-card-content{
+    background-color: white;
+    color: black;
+    justify-items: center;
+    justify-content: center;
+    padding: 16px;
+
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+}
