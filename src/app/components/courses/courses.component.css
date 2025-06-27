@@ -1,0 +1,35 @@
+.coursesContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 32px;
+
+}
+
+.content{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    max-width: 50%;
+}
+
+img{
+    width: 100%;
+}
+mat-card-title{
+    color: white;
+}
+mat-card-subtitle{
+    color: #0dd;
+}
+mat-card-content{
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+mat-card-footer{
+    color: #0dd;
+    padding: 10px;
+}

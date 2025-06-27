@@ -1,1 +1,20 @@
-<p>courses works!</p>
+<div class="coursesContainer">
+    @for (course of courses(); track $index) {
+        <mat-card>
+            <mat-card-header>
+                <mat-card-title>{{course.name}}</mat-card-title>
+                <mat-card-subtitle>{{course.level}}</mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>
+                <div class="images content">
+                    <img src="https://trisectinstitute.co/wp-content/uploads/2021/12/best-angular-training.png" alt="">
+                </div>
+                <div class="content">
+                <span>{{course.description}}</span>
+                </div>
+            </mat-card-content>
+            <mat-card-footer>Costo ${{course.price}}</mat-card-footer>
+        </mat-card>
+    }
+
+</div>
