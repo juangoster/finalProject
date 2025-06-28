@@ -1,0 +1,16 @@
+mat-card-title{
+    color: white;
+}
+mat-card-subtitle{
+    color: #0dd;
+}
+mat-card-content{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+mat-card-footer{
+    color: #0dd;
+    padding: 10px;
+}

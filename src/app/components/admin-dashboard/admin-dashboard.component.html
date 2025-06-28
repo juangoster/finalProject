@@ -1,1 +1,35 @@
-<p>admin-dashboard works!</p>
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>Gestión y administración de cursos</mat-card-title>
+        <mat-card-subtitle>Crea, Edita y elimina tus cursos en este módulo</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Nivel</th>
+                    <th>Descripción</th>
+                    <th>Duración</th>
+                    <th>Precio</th>
+                    <th>Editar</th>
+                    <th>Eliminar</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (course of courses(); track $index) {
+                    <tr>
+                        <td>{{course.name}}</td>
+                        <td>{{course.level}}</td>
+                        <td>{{course.description}}</td>
+                        <td>{{course.duration}}</td>
+                        <td>{{course.price}}</td>
+                        <td><button mat-mini-fab color="primary" routerLink="/"><mat-icon fontIcon="edit"></mat-icon></button></td>
+                        <td><button mat-mini-fab color="primary" (click)="deleteCourse()"><mat-icon fontIcon="delete"></mat-icon></button></td>
+                    </tr>
+
+                }
+            </tbody>
+        </table>
+    </mat-card-content>
+</mat-card>

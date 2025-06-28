@@ -12,10 +12,12 @@
     justify-content: center;
     justify-items: center;
     max-width: 50%;
+    padding: 10px;
 }
 
 img{
     width: 100%;
+    border-radius: 5px;
 }
 mat-card-title{
     color: white;
