@@ -23,7 +23,7 @@ services:
       mysqlserver:
         condition: service_healthy
     healthcheck:
-      test: curl -f http://localhost:8084/item
+      test: curl -f http://localhost:8084/course
   
   angularapp:
     container_name: angularapp
