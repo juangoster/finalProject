@@ -23,7 +23,9 @@ export class AdminDashboardComponent {
       return of([])
     })))
 
-    deleteCourse(){
-      return
+    deleteCourse(id:number){
+      this.service.deleteCourse(id).subscribe({
+        error: err=>{console.log(err)}
+       });
     }
 }

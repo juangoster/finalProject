@@ -1,3 +1,9 @@
+mat-card{
+    margin-top: 16px;
+}
+mat-card-header{
+    padding: 16px;
+}
 mat-card-title{
     color: white;
 }
@@ -13,4 +19,16 @@ mat-card-content{
 mat-card-footer{
     color: #0dd;
     padding: 10px;
+}
+.newCourse{
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    justify-items: center;
+}
+.center{
+    display: flex;
+    justify-items: center;
+    justify-content: center;
 }

@@ -12,4 +12,5 @@ footer{
     display: flex;
     justify-content: center;
     font-size: small;
+    padding: 10px;
 }

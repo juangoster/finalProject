@@ -22,6 +22,28 @@ export class CoursesService {
     )
   }
 
+  createCourse(course:Course):Observable<Course[]>{
+    return this.http.post<Course[]>(this.baseURL, course)
+    .pipe(
+      timeout(3000),
+      catchError(err=>{
+        console.log("error creating courses ", err);
+        throw new Error ("error creating courses")
+      })
+    )
+  }
+
+  deleteCourse(id:number):Observable<void>{
+    return this.http.delete<void>(`${this.baseURL}/${id}`)
+    .pipe(
+      timeout(3000),
+      catchError(err=>{
+        console.log("error deleting courses ", err);
+        throw new Error ("error deleting courses")
+      })
+    )
+  }
+
   updateCourse(id:number):Observable<Course[]>{
     return this.http.put<Course[]>(this.baseURL, id)
     .pipe(

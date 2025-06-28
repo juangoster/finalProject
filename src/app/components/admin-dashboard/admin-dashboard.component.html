@@ -4,6 +4,11 @@
         <mat-card-subtitle>Crea, Edita y elimina tus cursos en este módulo</mat-card-subtitle>
     </mat-card-header>
     <mat-card-content>
+        <div class="newCourse">
+            <div class="center"><h3>Crea un curso nuevo</h3></div>
+            <div><button mat-fab color="primary" routerLink="/courseForm"><mat-icon fontIcon="add"></mat-icon></button></div>
+        </div>
+        <mat-divider></mat-divider>
         <table>
             <thead>
                 <tr>
@@ -25,7 +30,7 @@
                         <td>{{course.duration}}</td>
                         <td>{{course.price}}</td>
                         <td><button mat-mini-fab color="primary" routerLink="/"><mat-icon fontIcon="edit"></mat-icon></button></td>
-                        <td><button mat-mini-fab color="primary" (click)="deleteCourse()"><mat-icon fontIcon="delete"></mat-icon></button></td>
+                        <td><button mat-mini-fab color="primary" (click)="deleteCourse(course.id)"><mat-icon fontIcon="delete"></mat-icon></button></td>
                     </tr>
 
                 }
