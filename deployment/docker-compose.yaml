@@ -23,7 +23,7 @@ services:
       mysqlserver:
         condition: service_healthy
   
-    angularapp:
+  angularapp:
     container_name: angularapp
     image: angularapp:v1
     volumes:

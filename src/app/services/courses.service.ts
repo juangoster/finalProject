@@ -9,7 +9,7 @@ import { Course } from '../utils/interfaces';
 export class CoursesService {
 
   private http:HttpClient=inject(HttpClient)
-  private baseURL:string="http://localhost:8084/course";
+  private baseURL:string="/api/course";
 
   getCourses():Observable<Course[]>{
     return this.http.get<Course[]>(this.baseURL)
