@@ -1,1 +1,30 @@
-<p>create-form works!</p>
+<mat-card>
+    <mat-card-header>
+        <mat-card-title style = "color: white">Crear nuevo Curso</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <form [formGroup]="form" (ngSubmit)="submit()">
+            <mat-form-field appearance="outline" class="full-width">
+                <mat-label>Nombre</mat-label>
+                <input matInput placeholder="Ej Angular Material" formControlName="name">
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="full-width">
+                <mat-label>Descripción</mat-label>
+                <textarea matInput formControlName="description" placeholder="describe brevemente el curso"></textarea>
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="full-width">
+                <mat-label>Nivel</mat-label>
+                <input matInput placeholder="Intermedio" formControlName="level">
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="full-width">
+                <mat-label>Duración</mat-label>
+                <input matInput placeholder="una semana" formControlName="duration">
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="full-width">
+                <mat-label>Precio</mat-label>
+                <input matInput placeholder="100000" formControlName="price">
+            </mat-form-field>
+            <button mat-raised-button color="primary" type="submit" [disabled]="form.invalid">Registrar</button>
+        </form>
+    </mat-card-content>
+</mat-card>
