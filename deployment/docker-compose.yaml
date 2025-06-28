@@ -22,6 +22,8 @@ services:
     depends_on:
       mysqlserver:
         condition: service_healthy
+    healthcheck:
+      test: curl -f http://localhost:8084/item
   
   angularapp:
     container_name: angularapp
